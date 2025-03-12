@@ -1,10 +1,13 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
 .hero_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 550px;
   padding: 0 60px;
-  background-color: #000;
-  color: #fff;
+  background-color: $black-color;
+  color: $white-color;
 }
 
 .hero_section > div {
@@ -30,16 +33,17 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 700;
-  border: 2px solid #fff;
+  border: 2px solid $white-color;
+  @include border(2px, solid, $white-color);
   border-radius: 32px;
-  background-color: #fff;
-  color: #000;
+  background-color: $white-color;
+  color: $black-color;
   transition: all 0.3s ease-in-out;
 }
 
 .hero_link:hover {
   background-color: transparent;
-  color: #fff;
+  color: $white-color;
 }
 
 .hero_image {

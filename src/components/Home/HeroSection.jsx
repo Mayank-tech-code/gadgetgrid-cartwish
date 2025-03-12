@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import "./HeroSection.css";
+
+import "./HeroSection.scss";
 
 const HeroSection = ({ title, subtitle, link, image }) => {
   return (
