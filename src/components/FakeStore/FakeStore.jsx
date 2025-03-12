@@ -1,7 +1,5 @@
 const FakeStore = () => {
-  return <div>
-    
-  </div>;
+  return <div></div>;
 };
 
 export default FakeStore;

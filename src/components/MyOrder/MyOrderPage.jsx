@@ -1,9 +1,8 @@
-import React from "react";
-
-import "./MyOrderPage.css";
 import Table from "../Common/Table";
 import useData from "../../hooks/useData";
 import Loader from "../Common/Loader";
+
+import "./MyOrderPage.css";
 
 const MyOrderPage = () => {
   const {

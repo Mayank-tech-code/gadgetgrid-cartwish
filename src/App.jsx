@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useReducer, useState } from "react";
+import { useCallback, useEffect, useReducer, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import UserContext from "./contexts/UserContext";
 import Navbar from "./components/Navbar/Navbar";
@@ -19,13 +19,10 @@ setAuthToken(getJwt());
 
 const App = () => {
   // No user
-  // Second commmit 
+
   const [user, setUser] = useState(null);
   const [cart, dispatchCart] = useReducer(cartReducer, []);
   const { data: cartData, refetch } = useData("/cart", null, ["cart"]);
-
-  // Remove after second commit just for testing
-  const name = "manish";
 
   const addToCartMutation = useAddToCart();
   const removeFromCartMutation = useRemoveFromCart();
