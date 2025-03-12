@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./LinkWithIcon.css";
+import "./LinkWithIcon.scss";
 
 const LinkWithIcon = ({ title, link, emoji, sidebar }) => {
   return (

@@ -1,3 +1,9 @@
 @mixin border($width: 2px, $style: solid, $color) {
   border: $width $style $color;
 }
+
+@mixin align_center {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+}

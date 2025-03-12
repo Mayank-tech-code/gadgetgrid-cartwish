@@ -12,7 +12,7 @@ import CartContext from "../../contexts/CartContext";
 import { getSuggestionsAPI } from "../../services/productServices";
 import ProfileAvatar from "../ProfileIcon/ProfileAvatar";
 
-import "./Navbar.css";
+import "./Navbar.scss";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -68,19 +68,19 @@ const Navbar = () => {
   }, [search]);
 
   return (
-    <nav className="align_center navbar">
+    <nav className=" navbar">
       <div className="align_center">
-        <h1 className="navbar_heading">GadgetGrid</h1>
-        <form className="align_center navbar_form" onSubmit={handleSubmit}>
+        <h1 className="navbar__heading">GadgetGrid</h1>
+        <form className="navbar__form" onSubmit={handleSubmit}>
           <input
             type="text"
-            className="navbar_search"
+            className="navbar__form--search"
             placeholder="Search Products"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-          <button type="submit" className="search_button">
+          <button type="submit" className="navbar__form--search-button">
             Search
           </button>
 
@@ -110,7 +110,7 @@ const Navbar = () => {
           )}
         </form>
       </div>
-      <div className="align_center navbar_links">
+      <div className="navbar_links">
         <LinkWithIcon title="Home" link="/" emoji={rocket} />
         <LinkWithIcon title="Products" link="/products" emoji={star} />
         <NavLink to="/chatbot" className="align_center">
